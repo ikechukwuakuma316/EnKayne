@@ -115,7 +115,7 @@ export default {
         localStorage.setItem("userStore", values);
 
         setTimeout(() => {
-          window.location.href = "/";
+          window.location.href = "/app";
         }, 1_000);
       }
     },

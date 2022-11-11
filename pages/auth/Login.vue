@@ -40,12 +40,12 @@
         >
           Sign In
         </button>
-        <a
+        <!-- <a
           class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
           href="#"
         >
           Forgot Password?
-        </a>
+        </a> -->
       </div>
     </form>
   </div>
@@ -83,14 +83,14 @@ export default {
       const { username, password } = userStore;
       if (
         this.username.toLowerCase() === username &&
-        this.password.toLowerCase() === password
+        this.password.trim() === password
       ) {
         const values = JSON.stringify({
           username: this.username,
           password: this.password,
         });
         localStorage.setItem("user", values);
-        window.location.href = "/";
+        window.location.href = "/app";
         return;
       }
       alert("incorrect username & password combination");

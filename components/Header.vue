@@ -50,7 +50,7 @@ export default {
       if (this.isLoggedIn) {
         localStorage.removeItem("user");
         setTimeout(() => {
-          history.go();
+          history.go(-1);
         }, 1_000);
       }
     },
